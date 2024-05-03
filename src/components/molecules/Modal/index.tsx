@@ -46,7 +46,7 @@ const Modal: React.FC<ModalProps> = ({ src, alt, className, onClose }) => {
             className="close-button"
             onClick={() => {
               setIsVisible(false);
-              setTimeout(onClose, 300); // Ensure to sync this timeout with your CSS transition
+              setTimeout(onClose, 50);
             }}
           >
             <svg
