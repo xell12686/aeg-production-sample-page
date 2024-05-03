@@ -40,7 +40,7 @@ export const sectionsData: Section[] = [
           title: "Summer Lunch Menu By Mark Best",
           excerpt:
             "AEG ambassador Mark Best's summer eats are guaranteed to help you make the most of the warmer weather and entertaining at home.",
-          url: "/",
+          url: "/blog/post-01",
         },
         {
           imgsrc: "/images/posts/Image-02.jpg",
@@ -48,7 +48,7 @@ export const sectionsData: Section[] = [
           title: "A Traditional Christmas Eve, Mark Best Style",
           excerpt:
             "One of Australia's best chefs and AEG ambassador, Mark Best, shares his favourite Christmas Eve menu which is sure to impress your guests.",
-          url: "/",
+          url: "/blog/post-02",
         },
         {
           imgsrc: "/images/posts/Image-03.jpg",
@@ -56,7 +56,7 @@ export const sectionsData: Section[] = [
           title: "Taking Taste Further",
           excerpt:
             "This exclusive cookbook gives you all the know-how you need. We've designed it to make sure you get the most out of our products – and the best out of your food.",
-          url: "/",
+          url: "/blog/post-03",
         },
       ],
     },
