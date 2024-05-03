@@ -35,24 +35,24 @@ export const sectionsData: Section[] = [
       title: "All the latest from AEG",
       posts: [
         {
-          imgsrc: "/images/posts/image-01.jpg",
-          imgsrcFull: "/images/posts/image-01@2x.jpg",
+          imgsrc: "/images/posts/Image-01.jpg",
+          imgsrcFull: "/images/posts/Image-01@2x.jpg",
           title: "Summer Lunch Menu By Mark Best",
           excerpt:
             "AEG ambassador Mark Best's summer eats are guaranteed to help you make the most of the warmer weather and entertaining at home.",
           url: "/",
         },
         {
-          imgsrc: "/images/posts/image-02.jpg",
-          imgsrcFull: "/images/posts/image-02@2x.jpg",
+          imgsrc: "/images/posts/Image-02.jpg",
+          imgsrcFull: "/images/posts/Image-02@2x.jpg",
           title: "A Traditional Christmas Eve, Mark Best Style",
           excerpt:
             "One of Australia's best chefs and AEG ambassador, Mark Best, shares his favourite Christmas Eve menu which is sure to impress your guests.",
           url: "/",
         },
         {
-          imgsrc: "/images/posts/image-03.jpg",
-          imgsrcFull: "/images/posts/image-03@2x.jpg",
+          imgsrc: "/images/posts/Image-03.jpg",
+          imgsrcFull: "/images/posts/Image-03@2x.jpg",
           title: "Taking Taste Further",
           excerpt:
             "This exclusive cookbook gives you all the know-how you need. We've designed it to make sure you get the most out of our products – and the best out of your food.",

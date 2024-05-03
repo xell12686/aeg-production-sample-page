@@ -32,7 +32,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               fill
               objectFit="cover"
               objectPosition="center top"
-              className="cursor-pointer"
+              className="thumbnail cursor-pointer"
             />
           </div>
         )}
@@ -49,7 +49,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               fill
               objectFit="cover"
               objectPosition="center top"
-              className="cursor-pointer"
+              className="thumbnail cursor-pointer"
             />
           </div>
         )}
@@ -64,7 +64,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               fill
               objectFit="cover"
               objectPosition="center top"
-              className="cursor-pointer"
+              className="thumbnail cursor-pointer"
             />
           </div>
         )}

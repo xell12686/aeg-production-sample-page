@@ -13,14 +13,16 @@ interface PostPreviewProps {
 
 const PostPreview: React.FC<PostPreviewProps> = ({
   imgsrc,
+  imgsrcFull,
   title,
   excerpt,
   url,
 }) => {
+  console.log(imgsrcFull);
   return (
     <div className="post-preview mb-3 flex flex-col items-start">
       <div className="relative h-44 w-full border-b-4 border-primary lg:h-[280px]">
-        <Image src={imgsrc} alt={title} fill objectFit="cover" />
+        <Image src={imgsrcFull} alt={title} fill objectFit="cover" />
       </div>
       <div className="post-text mt-5 flex flex-wrap gap-6">
         <h3 className="text-xl font-normal">{title}</h3>
