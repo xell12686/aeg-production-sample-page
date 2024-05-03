@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Modal from "../Modal";
+import "./ImagesGrid.css";
 
 export interface ImagesGridProps {
   images: { src: string; alt: string; srcFull: string }[];
@@ -18,7 +19,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
   } | null>(null);
 
   return (
-    <div className="relative flex h-[300px] w-full gap-5 md:h-[600px]">
+    <div className="images-grid relative flex h-[300px] w-full gap-5 md:h-[600px]">
       <div className="flex h-full w-1/2 flex-col">
         {images[0] && (
           <div
@@ -26,11 +27,12 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
             onClick={() => setSelectedImage(images[0])}
           >
             <Image
-              src={images[0].src}
+              src={images[0].srcFull}
               alt={images[0].alt}
               fill
               objectFit="cover"
               objectPosition="center top"
+              className="cursor-pointer"
             />
           </div>
         )}
@@ -42,11 +44,12 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
             onClick={() => setSelectedImage(images[1])}
           >
             <Image
-              src={images[1].src}
+              src={images[1].srcFull}
               alt={images[1].alt}
               fill
               objectFit="cover"
               objectPosition="center top"
+              className="cursor-pointer"
             />
           </div>
         )}
@@ -56,11 +59,12 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
             onClick={() => setSelectedImage(images[2])}
           >
             <Image
-              src={images[2].src}
+              src={images[2].srcFull}
               alt={images[2].alt}
               fill
               objectFit="cover"
               objectPosition="center top"
+              className="cursor-pointer"
             />
           </div>
         )}

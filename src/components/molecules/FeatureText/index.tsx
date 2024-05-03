@@ -15,14 +15,16 @@ const FeatureText: React.FC<FeatureTextProps> = ({
 }) => {
   return (
     <div>
-      <h3 className="mb-4 text-2xl font-light uppercase">{title}</h3>
+      <h3 className="mb-4 text-xl font-light uppercase tracking-wide md:text-2xl">
+        {title}
+      </h3>
       <hr className="mb-6" />
-      <p className="mb-6 text-xl font-light leading-relaxed opacity-70">
+      <p className="text-large mb-6 font-light leading-relaxed opacity-70 md:text-xl">
         {description}
       </p>
       {footnoteLabel && footnoteContent && (
         <div className="border- mt-4 pt-4">
-          <h4 className="text-primary mb-4 text-xl font-medium">
+          <h4 className="mb-4 text-xl font-medium text-primary">
             {footnoteLabel}
           </h4>
           <p className="text-[1.15rem] leading-relaxed">{footnoteContent}</p>
