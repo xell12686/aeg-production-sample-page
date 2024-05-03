@@ -50,6 +50,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               objectFit="cover"
               objectPosition="center top"
               className="thumbnail cursor-pointer"
+              priority
             />
           </div>
         )}

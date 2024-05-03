@@ -24,9 +24,9 @@ const FeatureText: React.FC<FeatureTextProps> = ({
       </p>
       {footnoteLabel && footnoteContent && (
         <div className="border- mt-4 pt-4">
-          <h4 className="mb-4 text-xl font-medium text-primary">
+          <label className="mb-4 text-xl font-medium text-primary">
             {footnoteLabel}
-          </h4>
+          </label>
           <p className="text-[1.15rem] leading-relaxed">{footnoteContent}</p>
         </div>
       )}

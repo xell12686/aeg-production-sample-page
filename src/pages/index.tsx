@@ -4,6 +4,7 @@ import DefaultTemplate from "@/components/templates/DefaultTemplate";
 import FeaturedPosts from "@/components/organisms/FeaturedPosts";
 import { sectionsData } from "@/mock/cmsSections";
 import { Section } from "@/types/pageSections";
+import Head from "next/head";
 
 const HomePage = () => {
   const pageSections: Section[] = sectionsData;
@@ -21,6 +22,13 @@ const HomePage = () => {
 
   return (
     <DefaultTemplate>
+      <Head>
+        <title>AEG sample page</title>
+        <meta
+          name="description"
+          content="Sample Demo page for Filta Testing by James Lacandula"
+        ></meta>
+      </Head>
       {pageSections.map((section, index) => (
         <div key={index}>{renderSection(section)}</div>
       ))}

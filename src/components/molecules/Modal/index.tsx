@@ -41,6 +41,7 @@ const Modal: React.FC<ModalProps> = ({ src, alt, className, onClose }) => {
             height="500"
             objectFit="contain"
             className=""
+            priority
           />
           <button
             className="close-button"

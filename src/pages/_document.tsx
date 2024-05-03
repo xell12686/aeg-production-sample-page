@@ -3,20 +3,16 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          {/* Place any custom tags you want in the head here, 
-          like external stylesheet links or meta tags */}
           <link rel="shortcut icon" href="/images/favicon.png" />
-          <meta
-            name="AEG sample page"
-            content="Sample Demo page for Filta Testing by James Lacandula"
-          ></meta>
+          <link
+            rel="canonical"
+            href="https://aeg-production-sample-page.vercel.app/"
+          />
         </Head>
         <body>
-          {/* This is where the main app will be rendered */}
           <Main />
-          {/* Scripts that Next.js needs to function properly */}
           <NextScript />
         </body>
       </Html>
