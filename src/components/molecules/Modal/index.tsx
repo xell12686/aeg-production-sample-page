@@ -5,10 +5,11 @@ import "./Modal.css";
 interface ModalProps {
   src: string;
   alt: string;
+  className: string;
   onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ src, alt, onClose }) => {
+const Modal: React.FC<ModalProps> = ({ src, alt, className, onClose }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -24,9 +25,11 @@ const Modal: React.FC<ModalProps> = ({ src, alt, onClose }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-95 p-4 ${
-        isVisible ? "modal-enter-active" : "modal-exit-active"
-      }`}
+      className={
+        `fixed inset-0 z-10 items-center justify-center bg-black bg-opacity-95 p-4 ${
+          isVisible ? "modal-enter-active" : "modal-exit-active"
+        } ` + className
+      }
       onClick={handleBackgroundClick}
     >
       <div className="m-2 bg-primary p-2 shadow-xl">

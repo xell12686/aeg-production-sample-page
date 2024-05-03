@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Modal from "../Modal";
 import "./ImagesGrid.css";
 
@@ -17,20 +17,6 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
     alt: string;
     srcFull: string;
   } | null>(null);
-
-  const [preloadedImage, setPreloadedImage] = useState<HTMLImageElement | null>(
-    null,
-  );
-
-  useEffect(() => {
-    if (selectedImage) {
-      const img = new Image();
-      img.src = selectedImage.srcFull;
-      img.onload = () => {
-        setPreloadedImage(img);
-      };
-    }
-  }, [selectedImage]);
 
   return (
     <div className="images-grid relative flex h-[230px] w-full gap-5 sm:h-[300px] md:h-[600px]">
@@ -63,7 +49,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               fill
               objectFit="cover"
               objectPosition="center top"
-              className="cursor-pointer"
+              className="thumbnail cursor-pointer"
             />
           </div>
         )}
@@ -78,16 +64,17 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               fill
               objectFit="cover"
               objectPosition="center top"
-              className="cursor-pointer"
+              className="thumbnail cursor-pointer"
             />
           </div>
         )}
       </div>
       {selectedImage && (
         <Modal
-          src={preloadedImage}
+          src={selectedImage.srcFull}
           alt={selectedImage.alt}
           onClose={() => setSelectedImage(null)}
+          className={selectedImage ? `flex` : "hidden"}
         />
       )}
     </div>
