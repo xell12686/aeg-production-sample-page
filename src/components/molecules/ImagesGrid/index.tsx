@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "../Modal";
 import "./ImagesGrid.css";
 
@@ -18,8 +18,22 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
     srcFull: string;
   } | null>(null);
 
+  const [preloadedImage, setPreloadedImage] = useState<HTMLImageElement | null>(
+    null,
+  );
+
+  useEffect(() => {
+    if (selectedImage) {
+      const img = new Image();
+      img.src = selectedImage.srcFull;
+      img.onload = () => {
+        setPreloadedImage(img);
+      };
+    }
+  }, [selectedImage]);
+
   return (
-    <div className="images-grid relative flex h-[300px] w-full gap-5 md:h-[600px]">
+    <div className="images-grid relative flex h-[230px] w-full gap-5 sm:h-[300px] md:h-[600px]">
       <div className="flex h-full w-1/2 flex-col">
         {images[0] && (
           <div
@@ -49,7 +63,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               fill
               objectFit="cover"
               objectPosition="center top"
-              className="thumbnail cursor-pointer"
+              className="cursor-pointer"
             />
           </div>
         )}
@@ -64,14 +78,14 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               fill
               objectFit="cover"
               objectPosition="center top"
-              className="thumbnail cursor-pointer"
+              className="cursor-pointer"
             />
           </div>
         )}
       </div>
       {selectedImage && (
         <Modal
-          src={selectedImage.srcFull}
+          src={preloadedImage}
           alt={selectedImage.alt}
           onClose={() => setSelectedImage(null)}
         />
