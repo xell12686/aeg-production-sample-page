@@ -6,13 +6,19 @@ const HomePage = () => {
   const images = [
     {
       src: "/images/slides/Image-01.jpg",
+      srcFull: "/images/slides/Image-01@2x.jpg",
       alt: "Father and son walking through a field",
     },
     {
       src: "/images/slides/Image-02.jpg",
+      srcFull: "/images/slides/Image-02@2x.jpg",
       alt: "Bowl of assorted fresh fruits",
     },
-    { src: "/images/slides/Image-03.jpg", alt: "Fresh asparagus" },
+    {
+      src: "/images/slides/Image-03.jpg",
+      srcFull: "/images/slides/Image-03@2x.jpg",
+      alt: "Fresh asparagus",
+    },
   ];
 
   return (

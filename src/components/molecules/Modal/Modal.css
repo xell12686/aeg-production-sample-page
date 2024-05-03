@@ -1,0 +1,14 @@
+.close-button {
+  @apply absolute z-20 p-2 text-white;
+  background: none;
+  border: none;
+  top: -35px;
+  right: -35px;
+  .close-icon {
+    @apply h-5 w-5 lg:h-8 lg:w-8;
+  }
+  @media (min-width: 768px) {
+    top: -60px;
+    right: -60px;
+  }
+}
