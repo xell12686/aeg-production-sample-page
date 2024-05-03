@@ -8,6 +8,10 @@ class MyDocument extends Document {
           {/* Place any custom tags you want in the head here, 
           like external stylesheet links or meta tags */}
           <link rel="shortcut icon" href="/images/favicon.png" />
+          <meta
+            name="AEG sample page"
+            content="Sample Demo page for Filta Testing by James Lacandula"
+          ></meta>
         </Head>
         <body>
           {/* This is where the main app will be rendered */}

@@ -15,9 +15,9 @@ const FeatureText: React.FC<FeatureTextProps> = ({
 }) => {
   return (
     <div>
-      <h3 className="mb-4 text-xl font-light uppercase tracking-wide md:text-2xl">
+      <h1 className="mb-4 text-xl font-light uppercase tracking-wide md:text-2xl">
         {title}
-      </h3>
+      </h1>
       <hr className="mb-6" />
       <p className="text-large mb-6 font-light leading-relaxed opacity-70 md:text-xl">
         {description}
