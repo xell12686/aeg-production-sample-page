@@ -21,7 +21,7 @@ const FeaturePhotosGrid: React.FC<FeaturePhotosGridProps> = ({
   };
   return (
     <div className="bg-black text-white">
-      <div className="flex flex-col gap-5 lg:flex-row">
+      <div className="flex flex-col gap-6 lg:flex-row">
         <div className="lg:w-2/3">
           <ImagesGrid images={images || []} />
         </div>

@@ -4,7 +4,7 @@ import { AppProps } from "next/app";
 import "../app/globals.css";
 
 const openSans = Open_Sans({
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
