@@ -1,5 +1,6 @@
 import { Open_Sans } from "next/font/google";
 import React from "react";
+import { AppProps } from "next/app";
 import "../app/globals.css";
 
 const openSans = Open_Sans({
@@ -9,7 +10,7 @@ const openSans = Open_Sans({
   display: "swap",
 });
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <main className={openSans.className}>
       <Component {...pageProps} />
