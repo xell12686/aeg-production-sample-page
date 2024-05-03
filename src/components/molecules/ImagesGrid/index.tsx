@@ -33,6 +33,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               objectFit="cover"
               objectPosition="center top"
               className="thumbnail cursor-pointer"
+              sizes="(max-width: 640) 50vw, 33vw"
             />
           </div>
         )}
@@ -51,6 +52,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               objectPosition="center top"
               className="thumbnail cursor-pointer"
               priority
+              sizes="(max-width: 640) 50vw, 50vw"
             />
           </div>
         )}
@@ -66,6 +68,7 @@ const ImagesGrid: React.FC<ImagesGridProps> = ({ images }) => {
               objectFit="cover"
               objectPosition="center top"
               className="thumbnail cursor-pointer"
+              sizes="(max-width: 640) 100vw, 50vw"
             />
           </div>
         )}
