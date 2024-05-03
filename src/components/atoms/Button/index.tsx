@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 interface ButtonProps {
   onClick?: () => void;
@@ -13,12 +14,12 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   if (href) {
     return (
-      <a
+      <Link
         href={href}
-        className="border-b-1 hover:border-b-3 border-white uppercase text-white transition-all duration-300"
+        className="border-b-1 hover:border-b-3 border-primary uppercase text-white transition-all duration-300"
       >
         {label}
-      </a>
+      </Link>
     );
   } else {
     return (

@@ -18,7 +18,7 @@ const Modal: React.FC<ModalProps> = ({ src, alt, onClose }) => {
   const handleBackgroundClick = (event: React.MouseEvent) => {
     if (event.currentTarget === event.target) {
       setIsVisible(false);
-      setTimeout(onClose, 500); 
+      setTimeout(onClose, 500);
     }
   };
 
@@ -29,7 +29,7 @@ const Modal: React.FC<ModalProps> = ({ src, alt, onClose }) => {
       }`}
       onClick={handleBackgroundClick}
     >
-      <div className="m-2 bg-red p-2">
+      <div className="m-2 bg-primary p-2 shadow-xl">
         <div className="relative">
           <Image
             src={src}
@@ -37,6 +37,7 @@ const Modal: React.FC<ModalProps> = ({ src, alt, onClose }) => {
             width="500"
             height="500"
             objectFit="contain"
+            className=""
           />
           <button
             className="close-button"

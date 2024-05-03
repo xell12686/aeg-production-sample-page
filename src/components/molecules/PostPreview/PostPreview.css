@@ -1,0 +1,12 @@
+.post-preview {
+    .post-text {
+        flex-flow: wrap;
+    }
+    .read-more {
+        transition: all 100ms ease-in-out;
+        @apply border-b-primary uppercase border-b pb-2 font-medium;
+        &:hover {
+            @apply border-b-8;
+        }
+    }
+}

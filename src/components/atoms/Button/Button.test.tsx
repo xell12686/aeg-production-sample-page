@@ -1,6 +1,12 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import Button from "./index";
+import Button from ".";
+jest.mock(
+  "next/link",
+  () =>
+    ({ children }) =>
+      children,
+);
 
 describe("Button", () => {
   test("renders a button element when href is not provided", () => {
@@ -18,7 +24,7 @@ describe("Button", () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  test("renders an anchor element when href is provided", () => {
+  test("renders an anchor element wrapped by Link when href is provided", () => {
     render(<Button href="https://example.com" label="Go to example" />);
     const linkElement = screen.getByRole("link", { name: /go to example/i });
     expect(linkElement).toBeInTheDocument();
@@ -26,7 +32,7 @@ describe("Button", () => {
     expect(linkElement).toHaveAttribute("href", "https://example.com");
   });
 
-  test("anchor does not call onClick handler when clicked", () => {
+  test("anchor does not call onClick handler when clicked with href", () => {
     const handleClick = jest.fn();
     render(
       <Button
