@@ -1,6 +1,6 @@
 # AEG React SSR app for a mocked Headless CMS Data
 
-Submitted by: James Lacandula
+by: James Lacandula
 
 ## Front-end Tech Stack and Frameworks Decisions and Features:
 
